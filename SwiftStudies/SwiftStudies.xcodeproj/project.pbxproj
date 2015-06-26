@@ -107,16 +107,8 @@
 				4D52C6741B3DA12900E8F703 /* Resources */,
 				4D52C6711B3DA0F700E8F703 /* SupportingFiles */,
 				4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */,
-				4D52C5E31B3D9AF400E8F703 /* Supporting Files */,
 			);
 			path = SwiftStudies;
-			sourceTree = "<group>";
-		};
-		4D52C5E31B3D9AF400E8F703 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4D52C6431B3D9DFA00E8F703 /* App */ = {
