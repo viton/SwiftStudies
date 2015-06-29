@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
-class HomeViewController: BaseViewController, PlaceholderActionDelegate {
+class HomeViewController: BaseViewController, PlaceholderActionDelegate, ProjectsProviderCallback {
 
     @IBOutlet weak private var tableView:UITableView!
     @IBOutlet weak private var header:Header!
@@ -28,8 +29,12 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate {
         super.viewDidLoad()
         
         self.setupTableView()
+        requestData()
     }
     
+    func requestData() {
+        ProjectsProvider.getProjects(self)
+    }
     
     func setupTableView(){
         data = ["Teste", "T"]
@@ -39,6 +44,27 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate {
     
     func didClickPlaceholderAction(placeholder:Placeholder) {
         
+    }
+    
+    func alert(message:String) {
+        let alertController = UIAlertController(title: "Title", message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    //MARK: ProjectsProviderCallback
+    func didReceiveProjects() {
+        alert("Sucesso")
+    }
+    
+    func onFailGetProjects() {
+        alert("Erro")
+    }
+    
+    func didFailConnection() {
+        alert("No Internet")
     }
     
 }
