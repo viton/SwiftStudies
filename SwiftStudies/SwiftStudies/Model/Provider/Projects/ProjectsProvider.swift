@@ -15,30 +15,40 @@ protocol ProjectsProviderCallback {
     
     func onFailGetProjects();
     
-    func didFailConnection();
+    func didFailConnection(model: DataRequestModel);
     
 }
 
 class ProjectsProvider: NSObject {
    
     internal class func getProjects(callback: ProjectsProviderCallback) {
-        Alamofire.request(.GET, "http://private-64298-timesheet5.apiary-mock.com/projects").response { (request, response, responseObject, error) in
-            if(error != nil){
-                callback.didFailConnection()
-            }else if(response != nil){
-                let jsonString = NSString(data: responseObject as! NSData, encoding: NSUTF8StringEncoding)
-                
-                var err: NSError?
-                let data:NSData = responseObject as! NSData
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
-                
-                if(response?.statusCode >= 200 && response?.statusCode < 300){
-                    callback.didReceiveProjects()
-                }else{
-                    callback.onFailGetProjects()
-                }
+//        DataRequestService.get("http://private-64298-timesheet5.apiary-mock.com/projects").response { (request, response, responseObject, error) in
+//            if(error != nil){
+//                callback.didFailConnection()
+//            }else if(response != nil){
+//                let jsonString = NSString(data: responseObject as! NSData, encoding: NSUTF8StringEncoding)
+//                
+//                var err: NSError?
+//                let data:NSData = responseObject as! NSData
+//                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+//                
+//                if(response?.statusCode >= 200 && response?.statusCode < 300){
+//                    callback.didReceiveProjects()
+//                }else{
+//                    callback.onFailGetProjects()
+//                }
+//            }
+//        }
+        
+        DataRequestService.request(.GET, url: "http://private-64298-timesheet5.apiary-mock.com/projects", params: nil,
+            success: { (response) in
+                callback.didReceiveProjects()
+            }, failure: { (response, model) in
+                callback.onFailGetProjects()
+            }, noConnection: { (model) in
+                callback.didFailConnection(model)
             }
-        }
+        )
     }
     
 }

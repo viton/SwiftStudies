@@ -16,6 +16,8 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     private var data:Array<String>;
     private var tableManager:BaseTableViewManager?
     
+    var pendingRequest:DataRequestModel?
+    
     override init(){
         data = Array<String>()
         super.init();
@@ -49,7 +51,16 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     func alert(message:String) {
         let alertController = UIAlertController(title: "Title", message:
             message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: {
+            (action) in
+            
+            if(self.pendingRequest != nil){
+                println("Oi ")
+                self.pendingRequest!.repeat()
+                self.pendingRequest = nil
+            }
+            
+        } ))
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -63,8 +74,11 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         alert("Erro")
     }
     
-    func didFailConnection() {
+    func didFailConnection(model: DataRequestModel) {
         alert("No Internet")
+        pendingRequest = model
     }
+    
+
     
 }
