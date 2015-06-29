@@ -13,10 +13,10 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
 
     @IBOutlet weak private var tableView:UITableView!
     @IBOutlet weak private var header:Header!
+
+
     private var data:Array<String>;
     private var tableManager:BaseTableViewManager?
-    
-    var pendingRequest:DataRequestModel?
     
     override init(){
         data = Array<String>()
@@ -44,40 +44,15 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         tableManager!.updateWithData(data);
     }
     
-    func didClickPlaceholderAction(placeholder:Placeholder) {
-        
-    }
-    
-    func alert(message:String) {
-        let alertController = UIAlertController(title: "Title", message:
-            message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: {
-            (action) in
-            
-            if(self.pendingRequest != nil){
-                println("Oi ")
-                self.pendingRequest!.repeat()
-                self.pendingRequest = nil
-            }
-            
-        } ))
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
+    override func didClickPlaceholderAction(placeholder:Placeholder) {
+        super.didClickPlaceholderAction(placeholder)
     }
     
     //MARK: ProjectsProviderCallback
     func didReceiveProjects() {
-        alert("Sucesso")
+//        alert("Sucesso")
     }
-    
-    func onFailGetProjects() {
-        alert("Erro")
-    }
-    
-    func didFailConnection(model: DataRequestModel) {
-        alert("No Internet")
-        pendingRequest = model
-    }
+
     
 
     
