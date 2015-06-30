@@ -31,10 +31,15 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         super.viewDidLoad()
         
         self.setupTableView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         requestData()
     }
     
     func requestData() {
+        view.startLoading()
         ProjectsProvider.getProjects(self)
     }
     
@@ -50,7 +55,7 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     
     //MARK: ProjectsProviderCallback
     func didReceiveProjects() {
-//        alert("Sucesso")
+        view.stopLoading()
     }
 
     
