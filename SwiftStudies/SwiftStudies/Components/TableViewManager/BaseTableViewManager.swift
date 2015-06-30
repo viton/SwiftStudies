@@ -11,7 +11,7 @@ import UIKit
 public class BaseTableViewManager: NSObject, UITableViewDataSource {
    
     private var tableView:UITableView?
-    private var data:Array<NSObject>?
+    private var data:Array<AnyObject>?
     private var registeredNibs:Dictionary<String, String>?
     
     init(tableView:UITableView){
@@ -62,7 +62,7 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
     }
     
     //MARK: public methods
-    func updateWithData(data:Array<NSObject>){
+    func updateWithData(data:Array<AnyObject>){
         self.data = data
         self.registerCellNibs()
         self.tableView?.reloadData()
@@ -78,11 +78,11 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
     /// This function returns a *AnyClass* from the list of cells in this *UITableView* provided by method cellClasses()
     ///
     /// :returns: *AnyClass* of a cell classe. Default return is the first object in array provided by cellClasses().
-    func cellClassForItem(item:NSObject) -> AnyClass {
+    func cellClassForItem(item:AnyObject) -> AnyClass {
         return cellClasses().first!;
     }
     
-    func objectForIndexPath(indexPath:NSIndexPath) -> NSObject {
+    func objectForIndexPath(indexPath:NSIndexPath) -> AnyObject {
         return data![indexPath.row]
     }
     
@@ -97,7 +97,7 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
     
     public func  tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell
-        var item:NSObject
+        var item:AnyObject
         
         item = objectForIndexPath(indexPath)
         cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForClass(getClassName(cellClassForItem(item)))) as! UITableViewCell

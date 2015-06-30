@@ -44,7 +44,7 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     }
     
     func setupTableView(){
-        data = ["Teste", "T"]
+        data = []
         tableManager = TesteTableViewManager(tableView: tableView)
         tableManager!.updateWithData(data);
     }
@@ -54,8 +54,9 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     }
     
     //MARK: ProjectsProviderCallback
-    func didReceiveProjects() {
+    func didReceiveProjects(timesheetOptions:TimesheetOptions) {
         view.stopLoading()
+        tableManager!.updateWithData(timesheetOptions.projects!)
     }
 
     

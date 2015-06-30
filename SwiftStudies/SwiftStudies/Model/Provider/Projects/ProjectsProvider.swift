@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ObjectMapper
 
 protocol BaseProviderCallback {
 
@@ -18,7 +19,7 @@ protocol BaseProviderCallback {
 
 protocol ProjectsProviderCallback: BaseProviderCallback {
     
-    func didReceiveProjects();
+    func didReceiveProjects(timesheetOptions:TimesheetOptions);
     
 }
 
@@ -28,7 +29,11 @@ class ProjectsProvider: NSObject {
 
         DataRequestService.request(.GET, url: "http://private-64298-timesheet5.apiary-mock.com/projects", params: nil,
             success: { (response) in
-                callback.didReceiveProjects()
+                let timesheetOptions = Mapper<TimesheetOptions>().map(response)
+                
+                callback.didReceiveProjects(timesheetOptions!)
+                
+                
             }, failure: { (response, model) in
                 callback.onFailRequest()
             }, noConnection: { (model) in

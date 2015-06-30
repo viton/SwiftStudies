@@ -32,6 +32,9 @@
 		4DEB2E221B42CE4900BB27CD /* Loading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB2E211B42CE4900BB27CD /* Loading.xib */; };
 		4DEB2E2A1B42D07C00BB27CD /* ConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E291B42D07C00BB27CD /* ConstraintsExtension.swift */; };
 		4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E2B1B42D0AE00BB27CD /* LoadingExtension.swift */; };
+		4DEB2E2F1B42D9EB00BB27CD /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E2E1B42D9EB00BB27CD /* Project.swift */; };
+		4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E311B42DFF300BB27CD /* Task.swift */; };
+		4DEB2E351B42E3C900BB27CD /* TimesheetOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E341B42E3C900BB27CD /* TimesheetOptions.swift */; };
 		CF2753931B25B8707B71D574 /* Pods_SwiftStudies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3BDDCA5BEC7C88585C82E0 /* Pods_SwiftStudies.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,9 @@
 		4DEB2E211B42CE4900BB27CD /* Loading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Loading.xib; sourceTree = "<group>"; };
 		4DEB2E291B42D07C00BB27CD /* ConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsExtension.swift; sourceTree = "<group>"; };
 		4DEB2E2B1B42D0AE00BB27CD /* LoadingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingExtension.swift; sourceTree = "<group>"; };
+		4DEB2E2E1B42D9EB00BB27CD /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		4DEB2E311B42DFF300BB27CD /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4DEB2E341B42E3C900BB27CD /* TimesheetOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesheetOptions.swift; sourceTree = "<group>"; };
 		A9B7827F2E31030223F49B56 /* Pods-SwiftStudies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudies.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudies/Pods-SwiftStudies.release.xcconfig"; sourceTree = "<group>"; };
 		BB758239661A442417A3A681 /* Pods-SwiftStudies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudies/Pods-SwiftStudies.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3BDDCA5BEC7C88585C82E0 /* Pods_SwiftStudies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +286,9 @@
 		4DEB2E131B3DDC1700BB27CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4DEB2E2D1B42D9DB00BB27CD /* Project */,
+				4DEB2E301B42DFE700BB27CD /* Task */,
+				4DEB2E331B42E3B800BB27CD /* TimesheetOptions */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -324,6 +333,30 @@
 				4DEB2E2B1B42D0AE00BB27CD /* LoadingExtension.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4DEB2E2D1B42D9DB00BB27CD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB2E2E1B42D9EB00BB27CD /* Project.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		4DEB2E301B42DFE700BB27CD /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB2E311B42DFF300BB27CD /* Task.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		4DEB2E331B42E3B800BB27CD /* TimesheetOptions */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB2E341B42E3C900BB27CD /* TimesheetOptions.swift */,
+			);
+			path = TimesheetOptions;
 			sourceTree = "<group>";
 		};
 		8EFFBDD3B0CFDE79A8ECACAB /* Pods */ = {
@@ -514,7 +547,10 @@
 				4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */,
 				4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */,
 				4D52C6681B3D9DFA00E8F703 /* BaseComponentsView.swift in Sources */,
+				4DEB2E2F1B42D9EB00BB27CD /* Project.swift in Sources */,
+				4DEB2E351B42E3C900BB27CD /* TimesheetOptions.swift in Sources */,
 				4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */,
+				4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */,
 				4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
