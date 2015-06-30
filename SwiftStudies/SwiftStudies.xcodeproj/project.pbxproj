@@ -26,6 +26,7 @@
 		4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C65E1B3D9DFA00E8F703 /* HomeViewController.swift */; };
 		4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C65F1B3D9DFA00E8F703 /* HomeViewController.xib */; };
 		4D52C6761B3DA12900E8F703 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C6751B3DA12900E8F703 /* Images.xcassets */; };
+		4DA673F81B4329F80081BDB3 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */; };
 		4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */; };
 		4DEB2E191B41B8E100BB27CD /* DataRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */; };
 		4DEB2E201B42CE0000BB27CD /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E1F1B42CE0000BB27CD /* Loading.swift */; };
@@ -71,6 +72,7 @@
 		4D52C65E1B3D9DFA00E8F703 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D52C65F1B3D9DFA00E8F703 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4D52C6751B3DA12900E8F703 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
 		4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsProvider.swift; sourceTree = "<group>"; };
 		4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequestService.swift; sourceTree = "<group>"; };
 		4DEB2E1F1B42CE0000BB27CD /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				4DEB2E171B41B8B800BB27CD /* DataRequestService */,
 				4D52C6461B3D9DFA00E8F703 /* BaseViewController */,
 				4D52C6481B3D9DFA00E8F703 /* Messages */,
+				4DA673F61B4326C70081BDB3 /* TabBarController */,
 				4D52C64B1B3D9DFA00E8F703 /* TableViewManager */,
 				4D52C6501B3D9DFA00E8F703 /* ViewComponents */,
 			);
@@ -264,6 +267,14 @@
 				4D52C6751B3DA12900E8F703 /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DA673F61B4326C70081BDB3 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		4DEB2E111B3DDBE800BB27CD /* Model */ = {
@@ -549,6 +560,7 @@
 				4D52C6681B3D9DFA00E8F703 /* BaseComponentsView.swift in Sources */,
 				4DEB2E2F1B42D9EB00BB27CD /* Project.swift in Sources */,
 				4DEB2E351B42E3C900BB27CD /* TimesheetOptions.swift in Sources */,
+				4DA673F81B4329F80081BDB3 /* AppTabBarViewController.swift in Sources */,
 				4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */,
 				4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */,
 				4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */,

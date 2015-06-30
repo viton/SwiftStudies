@@ -56,6 +56,20 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     //MARK: ProjectsProviderCallback
     func didReceiveProjects(timesheetOptions:TimesheetOptions) {
         view.stopLoading()
+        let project = timesheetOptions.projects?.first
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
+        timesheetOptions.projects!.append(project!)
         tableManager!.updateWithData(timesheetOptions.projects!)
     }
 
