@@ -45,7 +45,7 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     
     func setupTableView(){
         data = []
-        tableManager = TesteTableViewManager(tableView: tableView)
+        tableManager = TesteTableViewManager(tableView: tableView, delegate:self)
         tableManager!.updateWithData(data);
     }
     

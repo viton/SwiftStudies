@@ -8,21 +8,30 @@
 
 import UIKit
 
-public class BaseTableViewManager: NSObject, UITableViewDataSource {
+protocol BaseTableViewManagerDelegate {
+    
+    func didSelectObject(object:AnyObject)
+    
+}
+
+public class BaseTableViewManager: NSObject {
    
     private var tableView:UITableView?
     private var data:Array<AnyObject>?
+    var tableViewManagerDelegate:BaseTableViewManagerDelegate
     private var registeredNibs:Dictionary<String, String>?
     
-    init(tableView:UITableView){
+    init(tableView:UITableView, delegate:BaseTableViewManagerDelegate){
         self.data = []
         self.tableView = tableView
+        tableViewManagerDelegate = delegate
         self.registeredNibs = Dictionary<String, String>()
         super.init()
         self.setupTableView()
     }
     
     private func setupTableView(){
+        self.tableView!.delegate = self
         self.tableView!.dataSource = self
         self.tableView!.tableFooterView = UIView(frame: CGRectZero)
         self.tableView!.backgroundColor = UIColor.clearColor();
@@ -90,7 +99,21 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
         cell.textLabel?.text = item.description;
     }
     
-    //MARK: UITableViewDataSource
+}
+
+//MARK: UITableViewDelegate
+extension BaseTableViewManager: UITableViewDelegate {
+    
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var object:AnyObject = data![indexPath.row]
+        tableViewManagerDelegate.didSelectObject(object)
+    }
+    
+}
+
+//MARK: UITableViewDataSource
+extension BaseTableViewManager:UITableViewDataSource {
+    
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data!.count
     }
@@ -101,7 +124,6 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
         
         item = objectForIndexPath(indexPath)
         cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForClass(getClassName(cellClassForItem(item)))) as! UITableViewCell
-        
         
         setData(item, toCell: cell)
         

@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol BaseProviderCallback {
+    
+    func onConnectionFailToRequest(model: DataRequestModel);
+    
+    func onFailRequest();
+}
+
 class BaseViewController: UIViewController, BaseProviderCallback, PlaceholderActionDelegate {
 
     var noConnectionPlaceholder:Placeholder?
@@ -60,6 +67,14 @@ class BaseViewController: UIViewController, BaseProviderCallback, PlaceholderAct
         if pendingRequest != nil {
             pendingRequest?.repeat()
         }
+    }
+    
+}
+
+extension BaseViewController: BaseTableViewManagerDelegate {
+    
+    func didSelectObject(object: AnyObject) {
+        println(object)
     }
     
 }

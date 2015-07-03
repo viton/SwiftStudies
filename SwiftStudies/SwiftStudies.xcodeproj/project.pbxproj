@@ -39,21 +39,10 @@
 		CF2753931B25B8707B71D574 /* Pods_SwiftStudies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3BDDCA5BEC7C88585C82E0 /* Pods_SwiftStudies.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4D52C5F61B3D9AF400E8F703 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D52C5D81B3D9AF400E8F703 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D52C5DF1B3D9AF400E8F703;
-			remoteInfo = SwiftStudies;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D52C5E41B3D9AF400E8F703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		4D52C5EF1B3D9AF400E8F703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4D52C5F51B3D9AF400E8F703 /* SwiftStudiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftStudiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D52C6441B3D9DFA00E8F703 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D52C6471B3D9DFA00E8F703 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4D52C6491B3D9DFA00E8F703 /* Messages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Messages.strings; sourceTree = "<group>"; };
@@ -96,13 +85,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D52C5F21B3D9AF400E8F703 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */,
-				4D52C5F51B3D9AF400E8F703 /* SwiftStudiesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -410,24 +391,6 @@
 			productReference = 4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D52C5F41B3D9AF400E8F703 /* SwiftStudiesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D52C6021B3D9AF400E8F703 /* Build configuration list for PBXNativeTarget "SwiftStudiesTests" */;
-			buildPhases = (
-				4D52C5F11B3D9AF400E8F703 /* Sources */,
-				4D52C5F21B3D9AF400E8F703 /* Frameworks */,
-				4D52C5F31B3D9AF400E8F703 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D52C5F71B3D9AF400E8F703 /* PBXTargetDependency */,
-			);
-			name = SwiftStudiesTests;
-			productName = SwiftStudiesTests;
-			productReference = 4D52C5F51B3D9AF400E8F703 /* SwiftStudiesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -439,10 +402,6 @@
 				TargetAttributes = {
 					4D52C5DF1B3D9AF400E8F703 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					4D52C5F41B3D9AF400E8F703 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 4D52C5DF1B3D9AF400E8F703;
 					};
 				};
 			};
@@ -460,7 +419,6 @@
 			projectRoot = "";
 			targets = (
 				4D52C5DF1B3D9AF400E8F703 /* SwiftStudies */,
-				4D52C5F41B3D9AF400E8F703 /* SwiftStudiesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -479,13 +437,6 @@
 				4D52C6661B3D9DFA00E8F703 /* TesteTableViewCell.xib in Resources */,
 				4D52C66A1B3D9DFA00E8F703 /* Header.xib in Resources */,
 				4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D52C5F31B3D9AF400E8F703 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,22 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D52C5F11B3D9AF400E8F703 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4D52C5F71B3D9AF400E8F703 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D52C5DF1B3D9AF400E8F703 /* SwiftStudies */;
-			targetProxy = 4D52C5F61B3D9AF400E8F703 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */ = {
@@ -701,38 +637,6 @@
 			};
 			name = Release;
 		};
-		4D52C6031B3D9AF400E8F703 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftStudies.app/SwiftStudies";
-			};
-			name = Debug;
-		};
-		4D52C6041B3D9AF400E8F703 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftStudies.app/SwiftStudies";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,15 +654,6 @@
 			buildConfigurations = (
 				4D52C6001B3D9AF400E8F703 /* Debug */,
 				4D52C6011B3D9AF400E8F703 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4D52C6021B3D9AF400E8F703 /* Build configuration list for PBXNativeTarget "SwiftStudiesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4D52C6031B3D9AF400E8F703 /* Debug */,
-				4D52C6041B3D9AF400E8F703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

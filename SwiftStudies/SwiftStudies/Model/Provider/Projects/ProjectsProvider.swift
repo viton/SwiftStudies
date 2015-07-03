@@ -10,13 +10,6 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-protocol BaseProviderCallback {
-
-    func onConnectionFailToRequest(model: DataRequestModel);
-    
-    func onFailRequest();
-}
-
 protocol ProjectsProviderCallback: BaseProviderCallback {
     
     func didReceiveProjects(timesheetOptions:TimesheetOptions);
