@@ -11,8 +11,9 @@ import UIKit
 class TesteTableViewManager: BaseTableViewManager {
    
     override func setData(item: AnyObject, toCell cell: UITableViewCell) {
-        var testCell = cell as! NewTableViewCell
-        testCell.cellBigName.text = item.description;
+        let testCell = cell as! NewTableViewCell
+        let project = item as! Project
+        testCell.cellBigName.text = project.name!;
     }
     
     override func cellClasses() -> Array<AnyClass> {

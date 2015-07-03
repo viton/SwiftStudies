@@ -12,13 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var homeViewController: UIViewController?
+    var tabbarController: AppTabBarViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds);
-        homeViewController = HomeViewController()
-        window!.rootViewController = homeViewController
+        tabbarController = AppTabBarViewController()
+        let home = HomeViewController()
+        window!.rootViewController = tabbarController
         window!.makeKeyAndVisible();
         window!.backgroundColor = UIColor.whiteColor();
         

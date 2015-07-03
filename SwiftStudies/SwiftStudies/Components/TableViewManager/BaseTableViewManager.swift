@@ -8,21 +8,30 @@
 
 import UIKit
 
-public class BaseTableViewManager: NSObject, UITableViewDataSource {
+protocol BaseTableViewManagerDelegate {
+    
+    func didSelectObject(object:AnyObject)
+    
+}
+
+public class BaseTableViewManager: NSObject {
    
     private var tableView:UITableView?
-    private var data:Array<NSObject>?
+    private var data:Array<AnyObject>?
+    var tableViewManagerDelegate:BaseTableViewManagerDelegate
     private var registeredNibs:Dictionary<String, String>?
     
-    init(tableView:UITableView){
+    init(tableView:UITableView, delegate:BaseTableViewManagerDelegate){
         self.data = []
         self.tableView = tableView
+        tableViewManagerDelegate = delegate
         self.registeredNibs = Dictionary<String, String>()
         super.init()
         self.setupTableView()
     }
     
     private func setupTableView(){
+        self.tableView!.delegate = self
         self.tableView!.dataSource = self
         self.tableView!.tableFooterView = UIView(frame: CGRectZero)
         self.tableView!.backgroundColor = UIColor.clearColor();
@@ -62,7 +71,7 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
     }
     
     //MARK: public methods
-    func updateWithData(data:Array<NSObject>){
+    func updateWithData(data:Array<AnyObject>){
         self.data = data
         self.registerCellNibs()
         self.tableView?.reloadData()
@@ -78,11 +87,11 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
     /// This function returns a *AnyClass* from the list of cells in this *UITableView* provided by method cellClasses()
     ///
     /// :returns: *AnyClass* of a cell classe. Default return is the first object in array provided by cellClasses().
-    func cellClassForItem(item:NSObject) -> AnyClass {
+    func cellClassForItem(item:AnyObject) -> AnyClass {
         return cellClasses().first!;
     }
     
-    func objectForIndexPath(indexPath:NSIndexPath) -> NSObject {
+    func objectForIndexPath(indexPath:NSIndexPath) -> AnyObject {
         return data![indexPath.row]
     }
     
@@ -90,18 +99,31 @@ public class BaseTableViewManager: NSObject, UITableViewDataSource {
         cell.textLabel?.text = item.description;
     }
     
-    //MARK: UITableViewDataSource
+}
+
+//MARK: UITableViewDelegate
+extension BaseTableViewManager: UITableViewDelegate {
+    
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var object:AnyObject = data![indexPath.row]
+        tableViewManagerDelegate.didSelectObject(object)
+    }
+    
+}
+
+//MARK: UITableViewDataSource
+extension BaseTableViewManager:UITableViewDataSource {
+    
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data!.count
     }
     
     public func  tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell
-        var item:NSObject
+        var item:AnyObject
         
         item = objectForIndexPath(indexPath)
         cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForClass(getClassName(cellClassForItem(item)))) as! UITableViewCell
-        
         
         setData(item, toCell: cell)
         
