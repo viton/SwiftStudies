@@ -20,7 +20,7 @@ class AppTabBarViewController: UITabBarController {
     func setupViewControllers() {
         var controllers = Array<UIViewController>()
         for var i=0; i<5; i++ {
-            let viewController = HomeViewController()
+            let viewController = UINavigationController(rootViewController: HomeViewController())
             controllers.append(viewController)
             addTabbarItem(viewController, title: "Home", imageName: "ic-home", tag: i)
         }

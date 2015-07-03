@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4C7B731B46D98D000EA238 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C7B721B46D98D000EA238 /* NavigationBarButton.swift */; };
+		4D4C7B771B46E570000EA238 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C7B751B46E570000EA238 /* RegisterViewController.swift */; };
+		4D4C7B781B46E570000EA238 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4C7B761B46E570000EA238 /* RegisterViewController.xib */; };
+		4D4C7B7B1B46FA51000EA238 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C7B7A1B46FA51000EA238 /* AppTextField.swift */; };
+		4D4C7B7D1B46FB8A000EA238 /* AppTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4C7B7C1B46FB8A000EA238 /* AppTextField.xib */; };
 		4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */; };
 		4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6441B3D9DFA00E8F703 /* AppDelegate.swift */; };
 		4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6471B3D9DFA00E8F703 /* BaseViewController.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4C7B721B46D98D000EA238 /* NavigationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
+		4D4C7B751B46E570000EA238 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4D4C7B761B46E570000EA238 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		4D4C7B7A1B46FA51000EA238 /* AppTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		4D4C7B7C1B46FB8A000EA238 /* AppTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppTextField.xib; sourceTree = "<group>"; };
 		4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D52C5E41B3D9AF400E8F703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		4D52C5EF1B3D9AF400E8F703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,6 +98,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4C7B711B46D967000EA238 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D4C7B721B46D98D000EA238 /* NavigationBarButton.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		4D4C7B741B46E550000EA238 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4D4C7B751B46E570000EA238 /* RegisterViewController.swift */,
+				4D4C7B761B46E570000EA238 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4D4C7B791B46F899000EA238 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				4D4C7B7A1B46FA51000EA238 /* AppTextField.swift */,
+				4D4C7B7C1B46FB8A000EA238 /* AppTextField.xib */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		4D52C5D71B3D9AF400E8F703 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +209,7 @@
 		4D52C6501B3D9DFA00E8F703 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				4D4C7B791B46F899000EA238 /* TextField */,
 				4D52C6511B3D9DFA00E8F703 /* Base */,
 				4D52C6531B3D9DFA00E8F703 /* Header */,
 				4DEB2E1E1B42CDB800BB27CD /* Loading */,
@@ -221,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				4D52C65D1B3D9DFA00E8F703 /* Home */,
+				4D4C7B741B46E550000EA238 /* Register */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -314,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				4DEB2E281B42D07C00BB27CD /* UIView */,
+				4D4C7B711B46D967000EA238 /* UIViewController */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,7 +468,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D52C6761B3DA12900E8F703 /* Images.xcassets in Resources */,
+				4D4C7B781B46E570000EA238 /* RegisterViewController.xib in Resources */,
 				4D52C6621B3D9DFA00E8F703 /* Messages.strings in Resources */,
+				4D4C7B7D1B46FB8A000EA238 /* AppTextField.xib in Resources */,
 				4D52C66E1B3D9DFA00E8F703 /* NewTableViewCell.xib in Resources */,
 				4D52C66C1B3D9DFA00E8F703 /* Placeholder.xib in Resources */,
 				4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */,
@@ -496,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */,
+				4D4C7B771B46E570000EA238 /* RegisterViewController.swift in Sources */,
 				4D52C66B1B3D9DFA00E8F703 /* Placeholder.swift in Sources */,
 				4D52C6691B3D9DFA00E8F703 /* Header.swift in Sources */,
 				4DEB2E2A1B42D07C00BB27CD /* ConstraintsExtension.swift in Sources */,
@@ -508,6 +550,7 @@
 				4D52C6631B3D9DFA00E8F703 /* Messages.swift in Sources */,
 				4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */,
 				4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */,
+				4D4C7B731B46D98D000EA238 /* NavigationBarButton.swift in Sources */,
 				4D52C6681B3D9DFA00E8F703 /* BaseComponentsView.swift in Sources */,
 				4DEB2E2F1B42D9EB00BB27CD /* Project.swift in Sources */,
 				4DEB2E351B42E3C900BB27CD /* TimesheetOptions.swift in Sources */,
@@ -515,6 +558,7 @@
 				4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */,
 				4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */,
 				4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */,
+				4D4C7B7B1B46FA51000EA238 /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
