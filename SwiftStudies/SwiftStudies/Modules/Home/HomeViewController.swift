@@ -15,27 +15,24 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     @IBOutlet weak private var header:Header!
 
 
-    private var data:Array<String>;
+    private var data:Array<String>?;
     private var tableManager:BaseTableViewManager?
-    
-    override init(){
-        data = Array<String>()
-        super.init();
-    }
-
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupTableView()
+        addRightNavigationBarButton(image:"ic-back", action: "rightButtonTapped")
+        addLeftNavigationBarButton(title:"Ok", action: "rightButtonTapped")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         requestData()
+    }
+    
+    func rightButtonTapped() {
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
     
     func requestData() {
@@ -46,7 +43,7 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     func setupTableView(){
         data = []
         tableManager = TesteTableViewManager(tableView: tableView)
-        tableManager!.updateWithData(data);
+        tableManager!.updateWithData(data!);
     }
     
     override func didClickPlaceholderAction(placeholder:Placeholder) {
@@ -73,7 +70,4 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         tableManager!.updateWithData(timesheetOptions.projects!)
     }
 
-    
-
-    
 }

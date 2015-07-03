@@ -30,7 +30,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="QcR-Ky-jyA" secondAttribute="trailing" id="4AN-n0-Wvw"/>
                 <constraint firstItem="EpE-I1-6md" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BtI-hi-Sgp"/>
