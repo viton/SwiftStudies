@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class HomeViewController: BaseViewController, PlaceholderActionDelegate, ProjectsProviderCallback {
+class HomeViewController: BaseViewController, PlaceholderActionDelegate {
 
     @IBOutlet weak private var tableView:UITableView!
     @IBOutlet weak private var header:Header!
@@ -23,7 +23,7 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         
         self.setupTableView()
         addRightNavigationBarButton(image:"ic-back", action: "rightButtonTapped")
-        addLeftNavigationBarButton(title:"Ok", action: "rightButtonTapped")
+        addLeftNavigationBarButton(title:"Ok", action: "leftButtonTapped")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,6 +33,10 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     
     func rightButtonTapped() {
         navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
+    
+    func leftButtonTapped() {
+        navigationController?.pushViewController(ProductsViewController(), animated: true)
     }
     
     func requestData() {
@@ -49,10 +53,18 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
     override func didClickPlaceholderAction(placeholder:Placeholder) {
         super.didClickPlaceholderAction(placeholder)
     }
+
+}
+
+//MARK: ProjectsProviderCallback
+extension HomeViewController: ProjectsProviderCallback {
     
-    //MARK: ProjectsProviderCallback
-    func didReceiveProjects(timesheetOptions:TimesheetOptions) {
+    override func prepareToResponse() {
+        super.prepareToResponse()
         view.stopLoading()
+    }
+    
+    func didReceiveProjects(timesheetOptions:TimesheetOptions) {
         let project = timesheetOptions.projects?.first
         timesheetOptions.projects!.append(project!)
         timesheetOptions.projects!.append(project!)
@@ -69,5 +81,5 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate, Project
         timesheetOptions.projects!.append(project!)
         tableManager!.updateWithData(timesheetOptions.projects!)
     }
-
+    
 }

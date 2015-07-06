@@ -52,7 +52,7 @@ class DataRequestService: NSObject {
         failure:(AnyObject, DataRequestModel) -> Void,
         noConnection: (DataRequestModel)-> Void ) -> Request {
 
-        return Alamofire.request(method, "http://private-64298-timesheet5.apiary-mock.com/projects").response { (request, response, responseObject, error) in
+        return Alamofire.request(method, url).response { (request, response, responseObject, error) in
 
             let model = DataRequestModel(method: method, url: url, params: params, success: success, failure: failure, noConnection: noConnection)
             
@@ -63,7 +63,7 @@ class DataRequestService: NSObject {
                 
                 var err: NSError?
                 let data:NSData = responseObject as! NSData
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+                let jsonResult: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as AnyObject!
                 
                 if(response?.statusCode >= 200 && response?.statusCode < 300){
                     success(jsonResult)
