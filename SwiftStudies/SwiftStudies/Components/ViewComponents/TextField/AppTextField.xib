@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
+            <connections>
+                <outlet property="borderView" destination="CHy-qz-arz" id="foj-8y-IQK"/>
+                <outlet property="disclaimerLabel" destination="fft-0X-8LQ" id="fex-e8-agD"/>
+                <outlet property="rightButton" destination="v4V-nK-i6N" id="esj-6j-IYG"/>
+                <outlet property="textField" destination="J4k-S2-Hb3" id="3eZ-Zb-aHy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CHy-qz-arz">
+            <rect key="frame" x="0.0" y="0.0" width="610" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                    <rect key="frame" x="2" y="2" width="606" height="37"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4V-nK-i6N">
+                            <rect key="frame" x="545" y="8" width="46" height="30"/>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4k-S2-Hb3">
+                            <rect key="frame" x="15" y="15" width="525" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-0X-8LQ">
+                            <rect key="frame" x="15" y="32" width="576" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J4k-S2-Hb3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="2Qo-OW-RTo"/>
+                        <constraint firstItem="fft-0X-8LQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="AKW-ci-ahl"/>
+                        <constraint firstAttribute="bottom" secondItem="fft-0X-8LQ" secondAttribute="bottom" constant="13.5" id="ARf-pS-J5p"/>
+                        <constraint firstItem="J4k-S2-Hb3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="AfR-Rs-4rZ"/>
+                        <constraint firstAttribute="bottom" secondItem="fft-0X-8LQ" secondAttribute="bottom" constant="13.5" id="GKZ-CE-38o"/>
+                        <constraint firstAttribute="trailing" secondItem="J4k-S2-Hb3" secondAttribute="trailing" constant="50" id="Nqu-RG-LCU"/>
+                        <constraint firstItem="v4V-nK-i6N" firstAttribute="leading" secondItem="J4k-S2-Hb3" secondAttribute="trailing" constant="5" id="SZV-OQ-b2W"/>
+                        <constraint firstAttribute="bottom" secondItem="fft-0X-8LQ" secondAttribute="bottom" constant="5" id="aeC-dd-uFn"/>
+                        <constraint firstAttribute="trailing" secondItem="v4V-nK-i6N" secondAttribute="trailing" constant="15" id="fNJ-lP-qjy"/>
+                        <constraint firstItem="fft-0X-8LQ" firstAttribute="top" secondItem="J4k-S2-Hb3" secondAttribute="bottom" id="gE1-cC-GkO"/>
+                        <constraint firstAttribute="trailing" secondItem="fft-0X-8LQ" secondAttribute="trailing" constant="15" id="i5D-1z-pQW"/>
+                        <constraint firstItem="J4k-S2-Hb3" firstAttribute="centerY" secondItem="v4V-nK-i6N" secondAttribute="centerY" id="jIf-2p-vfQ"/>
+                        <constraint firstAttribute="bottom" secondItem="fft-0X-8LQ" secondAttribute="bottom" constant="25" id="py7-ex-mIL"/>
+                        <constraint firstAttribute="bottom" secondItem="fft-0X-8LQ" secondAttribute="bottom" id="xa0-Dw-xXO"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Nqu-RG-LCU"/>
+                            <exclude reference="ARf-pS-J5p"/>
+                            <exclude reference="GKZ-CE-38o"/>
+                            <exclude reference="py7-ex-mIL"/>
+                            <exclude reference="xa0-Dw-xXO"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="2" id="1qj-Ni-coP"/>
+                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="2" id="HeR-An-Fyr"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="CHy-qz-arz" secondAttribute="top" constant="2" id="Lge-pM-sMn"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="CHy-qz-arz" secondAttribute="leading" constant="2" id="vmU-bV-wq2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="163" y="572"/>
+        </view>
+    </objects>
+</document>
