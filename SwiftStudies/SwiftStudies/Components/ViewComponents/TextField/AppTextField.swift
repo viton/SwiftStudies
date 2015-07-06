@@ -8,15 +8,22 @@
 
 import UIKit
 
-class AppTextField: BaseComponentsView {
+class AppTextField: FormView {
 
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet weak var disclaimerLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var borderView: UIView!
     
     @IBInspectable var placeholder: String = "Placeholder" {
         didSet {
             textField.placeholder = placeholder
+        }
+    }
+    
+    @IBInspectable var disclaimer: String = "" {
+        didSet {
+            setDisclaimerText(disclaimer)
         }
     }
     
@@ -66,6 +73,36 @@ class AppTextField: BaseComponentsView {
         if(isFirstResponder) {
             textField.becomeFirstResponder()
         }
+    }
+    
+    func setDisclaimerText(disclaimer:String) {
+        disclaimerLabel.text = disclaimer
+    }
+    
+    func setColor(color:UIColor) {
+        textField.textColor = color
+        disclaimerLabel.textColor = color
+        borderView.backgroundColor = color
+    }
+    
+}
+
+extension AppTextField: FormViewProtocol {
+    
+    func setSuccess() {
+        setDisclaimerText(disclaimer)
+        var color = UIColor.blackColor()
+        setColor(color)
+    }
+    
+    func setError(message: String) {
+        setDisclaimerText(message)
+        var color = UIColor.redColor()
+        setColor(color)
+    }
+    
+    func getValue() -> AnyObject {
+        return textField.text
     }
     
 }
