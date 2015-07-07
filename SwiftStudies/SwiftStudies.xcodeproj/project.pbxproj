@@ -27,6 +27,9 @@
 		4D4E51B21B4B2D480049D474 /* CollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51B11B4B2D480049D474 /* CollectionViewManager.swift */; };
 		4D4E51B51B4B2F030049D474 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51B31B4B2F030049D474 /* BaseCollectionViewCell.swift */; };
 		4D4E51B61B4B2F030049D474 /* BaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E51B41B4B2F030049D474 /* BaseCollectionViewCell.xib */; };
+		4D4E51B91B4C13050049D474 /* ProductCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51B81B4C13050049D474 /* ProductCollectionViewManager.swift */; };
+		4D4E51BE1B4C14540049D474 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51BC1B4C14540049D474 /* ProductCollectionViewCell.swift */; };
+		4D4E51BF1B4C14540049D474 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E51BD1B4C14540049D474 /* ProductCollectionViewCell.xib */; };
 		4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */; };
 		4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6441B3D9DFA00E8F703 /* AppDelegate.swift */; };
 		4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6471B3D9DFA00E8F703 /* BaseViewController.swift */; };
@@ -80,6 +83,9 @@
 		4D4E51B11B4B2D480049D474 /* CollectionViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewManager.swift; sourceTree = "<group>"; };
 		4D4E51B31B4B2F030049D474 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D4E51B41B4B2F030049D474 /* BaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		4D4E51B81B4C13050049D474 /* ProductCollectionViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewManager.swift; sourceTree = "<group>"; };
+		4D4E51BC1B4C14540049D474 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D4E51BD1B4C14540049D474 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D52C5E41B3D9AF400E8F703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		4D52C5EF1B3D9AF400E8F703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4E51B01B4B2D350049D474 /* Base */,
+				4D4E51B71B4C12E80049D474 /* Product */,
 			);
 			path = CollectionViewManager;
 			sourceTree = "<group>";
@@ -232,6 +239,31 @@
 				4D4E51B41B4B2F030049D474 /* BaseCollectionViewCell.xib */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4D4E51B71B4C12E80049D474 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51B81B4C13050049D474 /* ProductCollectionViewManager.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		4D4E51BA1B4C14360049D474 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51BB1B4C14430049D474 /* Product */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4D4E51BB1B4C14430049D474 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51BC1B4C14540049D474 /* ProductCollectionViewCell.swift */,
+				4D4E51BD1B4C14540049D474 /* ProductCollectionViewCell.xib */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		4D52C5D71B3D9AF400E8F703 = {
@@ -326,6 +358,7 @@
 				4D52C6531B3D9DFA00E8F703 /* Header */,
 				4DEB2E1E1B42CDB800BB27CD /* Loading */,
 				4D52C6561B3D9DFA00E8F703 /* Placeholder */,
+				4D4E51BA1B4C14360049D474 /* UICollectionViewCell */,
 				4D52C6591B3D9DFA00E8F703 /* UITableViewCell */,
 			);
 			path = ViewComponents;
@@ -594,6 +627,7 @@
 				4D52C66C1B3D9DFA00E8F703 /* Placeholder.xib in Resources */,
 				4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */,
 				4DEB2E221B42CE4900BB27CD /* Loading.xib in Resources */,
+				4D4E51BF1B4C14540049D474 /* ProductCollectionViewCell.xib in Resources */,
 				4D52C6661B3D9DFA00E8F703 /* TesteTableViewCell.xib in Resources */,
 				4D52C66A1B3D9DFA00E8F703 /* Header.xib in Resources */,
 				4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */,
@@ -673,6 +707,7 @@
 				4D4C7B871B4AC3CA000EA238 /* ValidationType.swift in Sources */,
 				4D52C6671B3D9DFA00E8F703 /* TesteTableViewManager.swift in Sources */,
 				4D52C6641B3D9DFA00E8F703 /* BaseTableViewManager.swift in Sources */,
+				4D4E51BE1B4C14540049D474 /* ProductCollectionViewCell.swift in Sources */,
 				4D52C6631B3D9DFA00E8F703 /* Messages.swift in Sources */,
 				4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */,
 				4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */,
@@ -686,6 +721,7 @@
 				4DA673F81B4329F80081BDB3 /* AppTabBarViewController.swift in Sources */,
 				4D4E51B51B4B2F030049D474 /* BaseCollectionViewCell.swift in Sources */,
 				4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */,
+				4D4E51B91B4C13050049D474 /* ProductCollectionViewManager.swift in Sources */,
 				4D4C7B901B4AE592000EA238 /* ZipCodeValidationType.swift in Sources */,
 				4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */,
 				4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */,

@@ -16,7 +16,7 @@ class ProductsViewController: BaseViewController, ProductsProviderCallback {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionManager = CollectionViewManager(collectionView: collectionView, delegate: self)
+        collectionManager = ProductCollectionViewManager(collectionView: collectionView, delegate: self)
     }
     
     override func viewWillAppear(animated: Bool) {
