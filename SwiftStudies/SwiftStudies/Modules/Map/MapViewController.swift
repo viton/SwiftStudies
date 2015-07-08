@@ -157,6 +157,13 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        let lineView = MKPolylineRenderer(overlay: overlay)
+        lineView.strokeColor = UIColor.blackColor()
+        
+        return lineView
+    }
+    
 }
 
 extension MapViewController {
@@ -246,6 +253,23 @@ extension MapViewController: StoreProviderCallback {
             array.append(location)
         }
         centerMap(array)
+        drawPolygonForLocations(array)
+    }
+    
+    func drawPolygonForLocations(locations: [CLLocation]){
+        mapView.removeOverlays(mapView.overlays)
+        let pointsCount = locations.count+1
+        
+        var pointsToUse: [CLLocationCoordinate2D] = []
+        
+        for location in locations {
+            pointsToUse.append(location.coordinate)
+        }
+        pointsToUse.append(locations[0].coordinate)
+        
+        let myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsCount)
+        
+        mapView.addOverlay(myPolyline)
     }
     
 }
