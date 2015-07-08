@@ -10,12 +10,14 @@ import UIKit
 
 protocol BaseProviderCallback {
     
-    func onConnectionFailToRequest(model: DataRequestModel);
+    func onConnectionFailToRequest(model: DataRequestModel)
     
-    func onFailRequest();
+    func onFailRequest()
+    
+    func prepareToResponse()
 }
 
-class BaseViewController: UIViewController, BaseProviderCallback, PlaceholderActionDelegate {
+class BaseViewController: UIViewController, PlaceholderActionDelegate {
 
     var noConnectionPlaceholder:Placeholder?
     var pendingRequest:DataRequestModel?
@@ -60,7 +62,17 @@ class BaseViewController: UIViewController, BaseProviderCallback, PlaceholderAct
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func didClickPlaceholderAction(placeholder:Placeholder) {
+        if pendingRequest != nil {
+            pendingRequest?.repeat()
+        }
+    }
+    
+}
 
+extension BaseViewController: BaseProviderCallback {
+    
     func onConnectionFailToRequest(model: DataRequestModel) {
         if(noConnectionPlaceholder == nil){
             noConnectionPlaceholder = Placeholder(frame: view.frame)
@@ -76,10 +88,8 @@ class BaseViewController: UIViewController, BaseProviderCallback, PlaceholderAct
         alert("Erro")
     }
     
-    func didClickPlaceholderAction(placeholder:Placeholder) {
-        if pendingRequest != nil {
-            pendingRequest?.repeat()
-        }
+    func prepareToResponse() {
+        view.removePlaceholder(&noConnectionPlaceholder)
     }
     
 }

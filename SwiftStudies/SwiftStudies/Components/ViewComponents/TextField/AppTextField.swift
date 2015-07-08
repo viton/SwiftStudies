@@ -77,6 +77,9 @@ class AppTextField: FormView {
     
     func setDisclaimerText(disclaimer:String) {
         disclaimerLabel.text = disclaimer
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.superview?.layoutIfNeeded()
+        })
     }
     
     func setColor(color:UIColor) {
