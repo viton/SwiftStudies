@@ -159,6 +159,47 @@ extension MapViewController: MKMapViewDelegate {
     
 }
 
+extension MapViewController {
+    
+    private func centerMap(locations: [CLLocation]) {
+        var minLat:Double = 180
+        var minLng:Double = 180
+        var maxLat:Double = -180
+        var maxLng:Double = -180
+        
+        for location in locations {
+            minLat = min(minLat, location.coordinate.latitude)
+            minLng = min(minLng, location.coordinate.longitude)
+            maxLat = max(maxLat, location.coordinate.latitude)
+            maxLng = max(maxLng, location.coordinate.longitude)
+        }
+        println(minLat)
+        println(minLng)
+        println(maxLat)
+        println(maxLng)
+        
+        
+        let mediumLat = (minLat+maxLat)/2.0
+        let mediumLng = (minLng+maxLng)/2.0
+        
+//        println("Medium Lat: \((minLat+maxLat)/2.0)")
+//        println("Medium Lng: \((minLng+maxLng)/2.0)")
+        let minLocation = CLLocation(latitude: minLat, longitude: minLng)
+        let maxLocation = CLLocation(latitude: maxLat, longitude: maxLng)
+        let mediumLocation = CLLocation(latitude: mediumLat, longitude: mediumLng)
+        
+        let distance = minLocation.distanceFromLocation(maxLocation)
+        println("Distance between: \(distance)")
+//        centerMapOnLocation(mediumLocation)
+        let regionRadius:Double = 1000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mediumLocation.coordinate,
+            distance, distance)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+    }
+    
+}
+
 extension CLLocationCoordinate2D {
     
     func toCLLocation() -> CLLocation {
@@ -198,6 +239,13 @@ extension MapViewController: StoreProviderCallback {
     func onSuccessStores(stores: Array<Store>) {
         addPinsForStores(stores)
         println(stores[0].name)
+        
+        var array = Array<CLLocation>()
+        for store in stores {
+            let location = CLLocation(latitude: store.latitude!, longitude: store.longitude!)
+            array.append(location)
+        }
+        centerMap(array)
     }
     
 }
