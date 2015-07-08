@@ -54,6 +54,10 @@ class HomeViewController: BaseViewController, PlaceholderActionDelegate {
         super.didClickPlaceholderAction(placeholder)
     }
 
+    override func didSelectObject(object: AnyObject) {
+        navigationController?.pushViewController(MapViewController(), animated: true)
+    }
+    
 }
 
 //MARK: ProjectsProviderCallback

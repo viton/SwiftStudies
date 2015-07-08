@@ -20,15 +20,14 @@ class ProductsProvider: NSObject {
    
     internal class func getProducts(callback: ProductsProviderCallback) {
         DataRequestService.request(.GET, url: "http://private-64298-timesheet5.apiary-mock.com/products", params: nil,
-            success: { (response) in
+            beforeResponse: { () in
                 callback.prepareToResponse()
+            }, success: { (response) in
                 let products = Mapper<Product>().mapArray(response)
                 callback.onSuccessGettingProducts(products!)
             }, failure: { (response, model) in
-                callback.prepareToResponse()
                 callback.onFailRequest()
             }, noConnection: { (model) in
-                callback.prepareToResponse()
                 callback.onConnectionFailToRequest(model)
             }
         )

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="SwiftStudies" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="MlP-Ox-eyf" id="Tul-xJ-3Hq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-Ox-eyf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </mapView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MlP-Ox-eyf" secondAttribute="bottom" id="BfY-41-c2T"/>
+                <constraint firstItem="MlP-Ox-eyf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hs1-bY-Fxg"/>
+                <constraint firstItem="MlP-Ox-eyf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LXo-5q-beG"/>
+                <constraint firstAttribute="trailing" secondItem="MlP-Ox-eyf" secondAttribute="trailing" id="mru-ex-7lk"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

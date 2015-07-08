@@ -21,15 +21,14 @@ class ProjectsProvider: NSObject {
     internal class func getProjects(callback: ProjectsProviderCallback) {
 
         DataRequestService.request(.GET, url: "http://private-64298-timesheet5.apiary-mock.com/projects", params: nil,
-            success: { (response) in
-                let timesheetOptions = Mapper<TimesheetOptions>().map(response)
+            beforeResponse: { () in
                 callback.prepareToResponse()
+            }, success: { (response) in
+                let timesheetOptions = Mapper<TimesheetOptions>().map(response)
                 callback.didReceiveProjects(timesheetOptions!)
             }, failure: { (response, model) in
-                callback.prepareToResponse()
                 callback.onFailRequest()
             }, noConnection: { (model) in
-                callback.prepareToResponse()
                 callback.onConnectionFailToRequest(model)
             }
         )

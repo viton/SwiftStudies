@@ -30,6 +30,14 @@
 		4D4E51B91B4C13050049D474 /* ProductCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51B81B4C13050049D474 /* ProductCollectionViewManager.swift */; };
 		4D4E51BE1B4C14540049D474 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51BC1B4C14540049D474 /* ProductCollectionViewCell.swift */; };
 		4D4E51BF1B4C14540049D474 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E51BD1B4C14540049D474 /* ProductCollectionViewCell.xib */; };
+		4D4E51C41B4C238A0049D474 /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51C31B4C238A0049D474 /* DBModel.swift */; };
+		4D4E51ED1B4C6CB50049D474 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51EB1B4C6CB50049D474 /* MapViewController.swift */; };
+		4D4E51EE1B4C6CB50049D474 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E51EC1B4C6CB50049D474 /* MapViewController.xib */; };
+		4D4E51F01B4C6D4C0049D474 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4E51EF1B4C6D4C0049D474 /* MapKit.framework */; };
+		4D4E51F21B4C6E310049D474 /* TabBarHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51F11B4C6E310049D474 /* TabBarHidden.swift */; };
+		4D4E51F51B4C73260049D474 /* StoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51F41B4C73260049D474 /* StoreProvider.swift */; };
+		4D4E51F81B4C739E0049D474 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51F71B4C739E0049D474 /* Store.swift */; };
+		4D4E51FC1B4C78CA0049D474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E51FB1B4C78CA0049D474 /* LocationManager.swift */; };
 		4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */; };
 		4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6441B3D9DFA00E8F703 /* AppDelegate.swift */; };
 		4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C6471B3D9DFA00E8F703 /* BaseViewController.swift */; };
@@ -49,6 +57,16 @@
 		4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52C65E1B3D9DFA00E8F703 /* HomeViewController.swift */; };
 		4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C65F1B3D9DFA00E8F703 /* HomeViewController.xib */; };
 		4D52C6761B3DA12900E8F703 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D52C6751B3DA12900E8F703 /* Images.xcassets */; };
+		4DA0A7221B4D87B100C30561 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7211B4D87B100C30561 /* MapPin.swift */; };
+		4DA0A7261B4D9FEF00C30561 /* MapCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7251B4D9FEF00C30561 /* MapCalloutView.swift */; };
+		4DA0A7281B4DA00400C30561 /* MapCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA0A7271B4DA00400C30561 /* MapCalloutView.xib */; };
+		4DA0A7371B4DB0A000C30561 /* ViewStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A72E1B4DB0A000C30561 /* ViewStylesheet.m */; };
+		4DA0A7381B4DB0A000C30561 /* MainStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7301B4DB0A000C30561 /* MainStylesheet.m */; };
+		4DA0A7391B4DB0A000C30561 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4DA0A7311B4DB0A000C30561 /* README */; };
+		4DA0A73A1B4DB0A000C30561 /* UIView+UIViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7341B4DB0A000C30561 /* UIView+UIViewStyle.m */; };
+		4DA0A73B1B4DB0A000C30561 /* UIViewAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7361B4DB0A000C30561 /* UIViewAttributes.m */; };
+		4DA0A73E1B4DB10300C30561 /* BaseStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A73D1B4DB10300C30561 /* BaseStylesheet.m */; };
+		4DA0A7491B4DB38D00C30561 /* LabelStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */; };
 		4DA673F81B4329F80081BDB3 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */; };
 		4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */; };
 		4DEB2E191B41B8E100BB27CD /* DataRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */; };
@@ -86,6 +104,14 @@
 		4D4E51B81B4C13050049D474 /* ProductCollectionViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewManager.swift; sourceTree = "<group>"; };
 		4D4E51BC1B4C14540049D474 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D4E51BD1B4C14540049D474 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		4D4E51C31B4C238A0049D474 /* DBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
+		4D4E51EB1B4C6CB50049D474 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4D4E51EC1B4C6CB50049D474 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		4D4E51EF1B4C6D4C0049D474 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D4E51F11B4C6E310049D474 /* TabBarHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarHidden.swift; sourceTree = "<group>"; };
+		4D4E51F41B4C73260049D474 /* StoreProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProvider.swift; sourceTree = "<group>"; };
+		4D4E51F71B4C739E0049D474 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		4D4E51FB1B4C78CA0049D474 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4D52C5E01B3D9AF400E8F703 /* SwiftStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D52C5E41B3D9AF400E8F703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		4D52C5EF1B3D9AF400E8F703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -107,6 +133,25 @@
 		4D52C65E1B3D9DFA00E8F703 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D52C65F1B3D9DFA00E8F703 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4D52C6751B3DA12900E8F703 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DA0A7211B4D87B100C30561 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		4DA0A7251B4D9FEF00C30561 /* MapCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCalloutView.swift; sourceTree = "<group>"; };
+		4DA0A7271B4DA00400C30561 /* MapCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapCalloutView.xib; sourceTree = "<group>"; };
+		4DA0A72D1B4DB0A000C30561 /* ViewStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewStylesheet.h; sourceTree = "<group>"; };
+		4DA0A72E1B4DB0A000C30561 /* ViewStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewStylesheet.m; sourceTree = "<group>"; };
+		4DA0A72F1B4DB0A000C30561 /* MainStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStylesheet.h; sourceTree = "<group>"; };
+		4DA0A7301B4DB0A000C30561 /* MainStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStylesheet.m; sourceTree = "<group>"; };
+		4DA0A7311B4DB0A000C30561 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4DA0A7331B4DB0A000C30561 /* UIView+UIViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewStyle.h"; sourceTree = "<group>"; };
+		4DA0A7341B4DB0A000C30561 /* UIView+UIViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewStyle.m"; sourceTree = "<group>"; };
+		4DA0A7351B4DB0A000C30561 /* UIViewAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAttributes.h; sourceTree = "<group>"; };
+		4DA0A7361B4DB0A000C30561 /* UIViewAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAttributes.m; sourceTree = "<group>"; };
+		4DA0A73C1B4DB10300C30561 /* BaseStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStylesheet.h; sourceTree = "<group>"; };
+		4DA0A73D1B4DB10300C30561 /* BaseStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStylesheet.m; sourceTree = "<group>"; };
+		4DA0A7401B4DB1EA00C30561 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		4DA0A7411B4DB1EA00C30561 /* Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fonts.h; sourceTree = "<group>"; };
+		4DA0A7421B4DB1EA00C30561 /* Stylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stylesheet.h; sourceTree = "<group>"; };
+		4DA0A7471B4DB38D00C30561 /* LabelStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelStylesheet.h; sourceTree = "<group>"; };
+		4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelStylesheet.m; sourceTree = "<group>"; };
 		4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
 		4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsProvider.swift; sourceTree = "<group>"; };
 		4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequestService.swift; sourceTree = "<group>"; };
@@ -127,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4E51F01B4C6D4C0049D474 /* MapKit.framework in Frameworks */,
 				CF2753931B25B8707B71D574 /* Pods_SwiftStudies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4C7B721B46D98D000EA238 /* NavigationBarButton.swift */,
+				4D4E51F11B4C6E310049D474 /* TabBarHidden.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -266,6 +313,57 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
+		4D4E51C01B4C23580049D474 /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51C21B4C237A0049D474 /* Model */,
+			);
+			path = LocalDB;
+			sourceTree = "<group>";
+		};
+		4D4E51C21B4C237A0049D474 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51C31B4C238A0049D474 /* DBModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D4E51EA1B4C6C990049D474 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7231B4D9FC600C30561 /* Partial */,
+				4DA0A7201B4D879E00C30561 /* Pin */,
+				4D4E51EB1B4C6CB50049D474 /* MapViewController.swift */,
+				4D4E51EC1B4C6CB50049D474 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4D4E51F31B4C72380049D474 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51F41B4C73260049D474 /* StoreProvider.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		4D4E51F61B4C73450049D474 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51F71B4C739E0049D474 /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		4D4E51FA1B4C78B90049D474 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				4D4E51FB1B4C78CA0049D474 /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 		4D52C5D71B3D9AF400E8F703 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +391,7 @@
 				4DEB2E111B3DDBE800BB27CD /* Model */,
 				4D52C65C1B3D9DFA00E8F703 /* Modules */,
 				4D52C6741B3DA12900E8F703 /* Resources */,
+				4DA0A7291B4DB00E00C30561 /* Style */,
 				4D52C6711B3DA0F700E8F703 /* SupportingFiles */,
 				4D52C5EE1B3D9AF400E8F703 /* LaunchScreen.xib */,
 			);
@@ -310,9 +409,11 @@
 		4D52C6451B3D9DFA00E8F703 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4D52C6461B3D9DFA00E8F703 /* BaseViewController */,
 				4D4E51AF1B4B2D350049D474 /* CollectionViewManager */,
 				4DEB2E171B41B8B800BB27CD /* DataRequestService */,
-				4D52C6461B3D9DFA00E8F703 /* BaseViewController */,
+				4D4E51C01B4C23580049D474 /* LocalDB */,
+				4D4E51FA1B4C78B90049D474 /* LocationManager */,
 				4D52C6481B3D9DFA00E8F703 /* Messages */,
 				4DA673F61B4326C70081BDB3 /* TabBarController */,
 				4D52C64B1B3D9DFA00E8F703 /* TableViewManager */,
@@ -353,11 +454,11 @@
 		4D52C6501B3D9DFA00E8F703 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				4D4C7B791B46F899000EA238 /* TextField */,
 				4D52C6511B3D9DFA00E8F703 /* Base */,
 				4D52C6531B3D9DFA00E8F703 /* Header */,
 				4DEB2E1E1B42CDB800BB27CD /* Loading */,
 				4D52C6561B3D9DFA00E8F703 /* Placeholder */,
+				4D4C7B791B46F899000EA238 /* TextField */,
 				4D4E51BA1B4C14360049D474 /* UICollectionViewCell */,
 				4D52C6591B3D9DFA00E8F703 /* UITableViewCell */,
 			);
@@ -403,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				4D52C65D1B3D9DFA00E8F703 /* Home */,
+				4D4E51EA1B4C6C990049D474 /* Map */,
 				4D4E51A31B4B15810049D474 /* Products */,
 				4D4C7B741B46E550000EA238 /* Register */,
 			);
@@ -421,6 +523,7 @@
 		4D52C6711B3DA0F700E8F703 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				4DA0A73F1B4DB1EA00C30561 /* Constants */,
 				4D52C5E41B3D9AF400E8F703 /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -432,6 +535,101 @@
 				4D52C6751B3DA12900E8F703 /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DA0A7201B4D879E00C30561 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7211B4D87B100C30561 /* MapPin.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
+		4DA0A7231B4D9FC600C30561 /* Partial */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7241B4D9FD700C30561 /* MapCalloutView */,
+			);
+			path = Partial;
+			sourceTree = "<group>";
+		};
+		4DA0A7241B4D9FD700C30561 /* MapCalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7251B4D9FEF00C30561 /* MapCalloutView.swift */,
+				4DA0A7271B4DA00400C30561 /* MapCalloutView.xib */,
+			);
+			path = MapCalloutView;
+			sourceTree = "<group>";
+		};
+		4DA0A7291B4DB00E00C30561 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A72A1B4DB0A000C30561 /* Stylesheets */,
+				4DA0A7321B4DB0A000C30561 /* UIView */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4DA0A72A1B4DB0A000C30561 /* Stylesheets */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A72B1B4DB0A000C30561 /* Components */,
+				4DA0A72F1B4DB0A000C30561 /* MainStylesheet.h */,
+				4DA0A7301B4DB0A000C30561 /* MainStylesheet.m */,
+				4DA0A7311B4DB0A000C30561 /* README */,
+			);
+			path = Stylesheets;
+			sourceTree = "<group>";
+		};
+		4DA0A72B1B4DB0A000C30561 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A73C1B4DB10300C30561 /* BaseStylesheet.h */,
+				4DA0A73D1B4DB10300C30561 /* BaseStylesheet.m */,
+				4DA0A7461B4DB37F00C30561 /* LabelStylesheet */,
+				4DA0A72C1B4DB0A000C30561 /* ViewStylesheet */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4DA0A72C1B4DB0A000C30561 /* ViewStylesheet */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A72D1B4DB0A000C30561 /* ViewStylesheet.h */,
+				4DA0A72E1B4DB0A000C30561 /* ViewStylesheet.m */,
+			);
+			path = ViewStylesheet;
+			sourceTree = "<group>";
+		};
+		4DA0A7321B4DB0A000C30561 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7331B4DB0A000C30561 /* UIView+UIViewStyle.h */,
+				4DA0A7341B4DB0A000C30561 /* UIView+UIViewStyle.m */,
+				4DA0A7351B4DB0A000C30561 /* UIViewAttributes.h */,
+				4DA0A7361B4DB0A000C30561 /* UIViewAttributes.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		4DA0A73F1B4DB1EA00C30561 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7401B4DB1EA00C30561 /* Colors.h */,
+				4DA0A7411B4DB1EA00C30561 /* Fonts.h */,
+				4DA0A7421B4DB1EA00C30561 /* Stylesheet.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4DA0A7461B4DB37F00C30561 /* LabelStylesheet */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7471B4DB38D00C30561 /* LabelStylesheet.h */,
+				4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */,
+			);
+			path = LabelStylesheet;
 			sourceTree = "<group>";
 		};
 		4DA673F61B4326C70081BDB3 /* TabBarController */ = {
@@ -456,6 +654,7 @@
 			children = (
 				4D4E51A81B4B18BD0049D474 /* Products */,
 				4DEB2E141B3DDC9500BB27CD /* Projects */,
+				4D4E51F31B4C72380049D474 /* Store */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -465,6 +664,7 @@
 			children = (
 				4D4E51AB1B4B2A330049D474 /* Product */,
 				4DEB2E2D1B42D9DB00BB27CD /* Project */,
+				4D4E51F61B4C73450049D474 /* Store */,
 				4DEB2E301B42DFE700BB27CD /* Task */,
 				4DEB2E331B42E3B800BB27CD /* TimesheetOptions */,
 			);
@@ -552,6 +752,7 @@
 		E4647167D13D11C902CAE49C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D4E51EF1B4C6D4C0049D474 /* MapKit.framework */,
 				FB3BDDCA5BEC7C88585C82E0 /* Pods_SwiftStudies.framework */,
 			);
 			name = Frameworks;
@@ -617,6 +818,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA0A7281B4DA00400C30561 /* MapCalloutView.xib in Resources */,
 				4D52C6761B3DA12900E8F703 /* Images.xcassets in Resources */,
 				4D4C7B781B46E570000EA238 /* RegisterViewController.xib in Resources */,
 				4D4E51A71B4B160A0049D474 /* ProductsViewController.xib in Resources */,
@@ -624,12 +826,14 @@
 				4D4E51B61B4B2F030049D474 /* BaseCollectionViewCell.xib in Resources */,
 				4D4C7B7D1B46FB8A000EA238 /* AppTextField.xib in Resources */,
 				4D52C66E1B3D9DFA00E8F703 /* NewTableViewCell.xib in Resources */,
+				4DA0A7391B4DB0A000C30561 /* README in Resources */,
 				4D52C66C1B3D9DFA00E8F703 /* Placeholder.xib in Resources */,
 				4D52C5F01B3D9AF400E8F703 /* LaunchScreen.xib in Resources */,
 				4DEB2E221B42CE4900BB27CD /* Loading.xib in Resources */,
 				4D4E51BF1B4C14540049D474 /* ProductCollectionViewCell.xib in Resources */,
 				4D52C6661B3D9DFA00E8F703 /* TesteTableViewCell.xib in Resources */,
 				4D52C66A1B3D9DFA00E8F703 /* Header.xib in Resources */,
+				4D4E51EE1B4C6CB50049D474 /* MapViewController.xib in Resources */,
 				4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,14 +893,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA0A7371B4DB0A000C30561 /* ViewStylesheet.m in Sources */,
 				4D4C7B841B4ABE71000EA238 /* FormView.swift in Sources */,
 				4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */,
+				4D4E51C41B4C238A0049D474 /* DBModel.swift in Sources */,
 				4D4C7B771B46E570000EA238 /* RegisterViewController.swift in Sources */,
 				4D52C66B1B3D9DFA00E8F703 /* Placeholder.swift in Sources */,
 				4D52C6691B3D9DFA00E8F703 /* Header.swift in Sources */,
 				4D4E51AD1B4B2A400049D474 /* Product.swift in Sources */,
 				4DEB2E2A1B42D07C00BB27CD /* ConstraintsExtension.swift in Sources */,
+				4DA0A73B1B4DB0A000C30561 /* UIViewAttributes.m in Sources */,
 				4DEB2E191B41B8E100BB27CD /* DataRequestService.swift in Sources */,
+				4DA0A7381B4DB0A000C30561 /* MainStylesheet.m in Sources */,
 				4D52C66D1B3D9DFA00E8F703 /* NewTableViewCell.swift in Sources */,
 				4D4E51A21B4B14E00049D474 /* ImageDownloadExtension.swift in Sources */,
 				4D4C7B8B1B4AD132000EA238 /* NameValidationType.swift in Sources */,
@@ -704,13 +912,19 @@
 				4D4E519F1B4B14D30049D474 /* PlaceholderExtension.swift in Sources */,
 				4D52C6651B3D9DFA00E8F703 /* TesteTableViewCell.swift in Sources */,
 				4DEB2E201B42CE0000BB27CD /* Loading.swift in Sources */,
+				4DA0A73E1B4DB10300C30561 /* BaseStylesheet.m in Sources */,
 				4D4C7B871B4AC3CA000EA238 /* ValidationType.swift in Sources */,
 				4D52C6671B3D9DFA00E8F703 /* TesteTableViewManager.swift in Sources */,
+				4D4E51F51B4C73260049D474 /* StoreProvider.swift in Sources */,
 				4D52C6641B3D9DFA00E8F703 /* BaseTableViewManager.swift in Sources */,
 				4D4E51BE1B4C14540049D474 /* ProductCollectionViewCell.swift in Sources */,
+				4DA0A7221B4D87B100C30561 /* MapPin.swift in Sources */,
+				4DA0A7491B4DB38D00C30561 /* LabelStylesheet.m in Sources */,
 				4D52C6631B3D9DFA00E8F703 /* Messages.swift in Sources */,
+				4DA0A73A1B4DB0A000C30561 /* UIView+UIViewStyle.m in Sources */,
 				4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */,
 				4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */,
+				4D4E51ED1B4C6CB50049D474 /* MapViewController.swift in Sources */,
 				4D4E51AA1B4B18CF0049D474 /* ProductsProvider.swift in Sources */,
 				4D4C7B8E1B4AE436000EA238 /* EmailValidationType.swift in Sources */,
 				4D4C7B731B46D98D000EA238 /* NavigationBarButton.swift in Sources */,
@@ -722,10 +936,14 @@
 				4D4E51B51B4B2F030049D474 /* BaseCollectionViewCell.swift in Sources */,
 				4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */,
 				4D4E51B91B4C13050049D474 /* ProductCollectionViewManager.swift in Sources */,
+				4D4E51FC1B4C78CA0049D474 /* LocationManager.swift in Sources */,
 				4D4C7B901B4AE592000EA238 /* ZipCodeValidationType.swift in Sources */,
+				4D4E51F81B4C739E0049D474 /* Store.swift in Sources */,
+				4D4E51F21B4C6E310049D474 /* TabBarHidden.swift in Sources */,
 				4DEB2E321B42DFF300BB27CD /* Task.swift in Sources */,
 				4D52C66F1B3D9DFA00E8F703 /* HomeViewController.swift in Sources */,
 				4D4C7B7B1B46FA51000EA238 /* AppTextField.swift in Sources */,
+				4DA0A7261B4D9FEF00C30561 /* MapCalloutView.swift in Sources */,
 				4D4E51B21B4B2D480049D474 /* CollectionViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

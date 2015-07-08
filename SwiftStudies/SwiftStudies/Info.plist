@@ -32,5 +32,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Queremos te ajudar a descobrir a loja mai perto de você</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Vamos achar a loja mais perto de você</string>
 </dict>
 </plist>

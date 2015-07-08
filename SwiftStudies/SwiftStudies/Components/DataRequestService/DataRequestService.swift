@@ -14,6 +14,7 @@ class DataRequestModel: NSObject{
     var method:Alamofire.Method
     var url: String
     var params: AnyObject?
+    var beforeResponse: () -> Void
     var success: (AnyObject) -> Void
     var failure:(AnyObject, DataRequestModel) -> Void
     var noConnection: (DataRequestModel)-> Void
@@ -21,12 +22,14 @@ class DataRequestModel: NSObject{
     init(method:Alamofire.Method,
         url: String,
         params:AnyObject?,
+        beforeResponse: () -> Void,
         success: (AnyObject) -> Void,
         failure:(AnyObject, DataRequestModel) -> Void,
         noConnection: (DataRequestModel)-> Void) {
         self.method = method
         self.url = url
         self.params = params
+        self.beforeResponse = beforeResponse
         self.success = success
         self.failure = failure
         self.noConnection = noConnection
@@ -52,26 +55,38 @@ class DataRequestService: NSObject {
         failure:(AnyObject, DataRequestModel) -> Void,
         noConnection: (DataRequestModel)-> Void ) -> Request {
 
-        return Alamofire.request(method, url).response { (request, response, responseObject, error) in
-
-            let model = DataRequestModel(method: method, url: url, params: params, success: success, failure: failure, noConnection: noConnection)
+        return DataRequestService.request(method, url: url, params: params, beforeResponse: { () -> Void in }, success: success, failure: failure, noConnection: noConnection)
+    }
+    
+    class func request(method:Alamofire.Method,
+        url: String,
+        params:AnyObject?,
+        beforeResponse: () -> Void,
+        success:(AnyObject) -> Void,
+        failure:(AnyObject, DataRequestModel) -> Void,
+        noConnection: (DataRequestModel)-> Void ) -> Request {
             
-            if(error != nil){
-                noConnection(model)
-            }else if(response != nil){
-                let jsonString = NSString(data: responseObject as! NSData, encoding: NSUTF8StringEncoding)
+            return Alamofire.request(method, url).response { (request, response, responseObject, error) in
                 
-                var err: NSError?
-                let data:NSData = responseObject as! NSData
-                let jsonResult: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as AnyObject!
+                let model = DataRequestModel(method: method, url: url, params: params, beforeResponse: beforeResponse, success: success, failure: failure, noConnection: noConnection)
                 
-                if(response?.statusCode >= 200 && response?.statusCode < 300){
-                    success(jsonResult)
-                }else{
-                    failure(jsonResult, model)
+                beforeResponse()
+                if(error != nil){
+                    noConnection(model)
+                }else if(response != nil){
+                    let jsonString = NSString(data: responseObject as! NSData, encoding: NSUTF8StringEncoding)
+                    
+                    var err: NSError?
+                    let data:NSData = responseObject as! NSData
+                    let jsonResult: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as AnyObject!
+                    
+                    if(response?.statusCode >= 200 && response?.statusCode < 300){
+                        success(jsonResult)
+                    }else{
+                        failure(jsonResult, model)
+                    }
                 }
             }
-        }
     }
     
     
