@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="SwiftStudies" customModuleProvider="target">
             <connections>
                 <outlet property="mapView" destination="MlP-Ox-eyf" id="Tul-xJ-3Hq"/>
+                <outlet property="tableView" destination="va2-ZT-WFU" id="IqE-uP-fPj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,13 +19,34 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-Ox-eyf">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-Xm-yWT">
+                    <rect key="frame" x="526" y="270" width="60" height="30"/>
+                    <state key="normal" title="Location">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="locationAction:" destination="-1" eventType="touchUpInside" id="7wd-Tu-k1q"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="va2-ZT-WFU">
+                    <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="4Qg-g8-N5i"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="MlP-Ox-eyf" secondAttribute="bottom" id="BfY-41-c2T"/>
                 <constraint firstItem="MlP-Ox-eyf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hs1-bY-Fxg"/>
                 <constraint firstItem="MlP-Ox-eyf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LXo-5q-beG"/>
+                <constraint firstAttribute="trailing" secondItem="xf9-Xm-yWT" secondAttribute="trailing" constant="14" id="Mkd-re-0Dp"/>
+                <constraint firstAttribute="bottom" secondItem="xf9-Xm-yWT" secondAttribute="bottom" constant="300" id="NkW-F7-CpQ"/>
+                <constraint firstAttribute="trailing" secondItem="va2-ZT-WFU" secondAttribute="trailing" id="Ok3-oY-OYX"/>
+                <constraint firstAttribute="bottom" secondItem="va2-ZT-WFU" secondAttribute="bottom" id="bd4-Wb-f3a"/>
                 <constraint firstAttribute="trailing" secondItem="MlP-Ox-eyf" secondAttribute="trailing" id="mru-ex-7lk"/>
+                <constraint firstItem="va2-ZT-WFU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tzy-O3-bJZ"/>
             </constraints>
         </view>
     </objects>

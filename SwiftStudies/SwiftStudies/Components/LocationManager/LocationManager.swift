@@ -34,6 +34,10 @@ class LocationManager: NSObject {
         locationManager?.startUpdatingLocation()
     }
     
+    func startGettingLocation() {
+        locationManager?.startUpdatingLocation()
+    }
+    
 }
 
 //MARK: CLLocationManagerDelegate

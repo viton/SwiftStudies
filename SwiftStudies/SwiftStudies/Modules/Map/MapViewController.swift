@@ -14,11 +14,14 @@ let initialLocation = CLLocation(latitude: -23.545181, longitude: -46.652164)
 class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     var locationManager:LocationManager?
     var storeToShowCallout:Store?
     var selectedAnnotationView:MKAnnotationView?
     var calloutView:MapCalloutView?
+    
+    var tableManager:BaseTableViewManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +37,17 @@ class MapViewController: BaseViewController {
     private func setup() {
         locationManager = LocationManager(callback: self)
         mapView.delegate = self
+        tableManager = StoreTableManager(tableView: tableView, delegate: self)
+        tableView.backgroundColor = UIColor.whiteColor()
     }
     
     private func requestStores(location: CLLocation){
         view.startLoading()
         StoreProvider.getAllStores(self)
+    }
+    
+    @IBAction func locationAction(sender: AnyObject) {
+        locationManager?.startGettingLocation()
     }
     
     private func centerMapOnLocation(location: CLLocation) {
@@ -166,6 +175,14 @@ extension MapViewController: MKMapViewDelegate {
     
 }
 
+extension MapViewController: BaseTableViewManagerDelegate {
+
+    override func didSelectObject(object: AnyObject) {
+        println(object)
+    }
+    
+}
+
 extension MapViewController {
     
     private func centerMap(locations: [CLLocation]) {
@@ -254,6 +271,7 @@ extension MapViewController: StoreProviderCallback {
         }
         centerMap(array)
         drawPolygonForLocations(array)
+        tableManager?.updateWithData(stores)
     }
     
     func drawPolygonForLocations(locations: [CLLocation]){
