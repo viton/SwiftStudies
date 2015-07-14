@@ -1,6 +1,6 @@
 //
 //  ImageDownloadExtension.swift
-//  par-ou-impar
+//  SwiftStudies
 //
 //  Created by Vitor Machado oliveira on 05/07/15.
 //  Copyright (c) 2015 Viton. All rights reserved.
