@@ -39,7 +39,6 @@ extension ProductsViewController: ProductsProviderCallback {
     }
     
     func onSuccessGettingProducts(products: Array<Product>) {
-        println(products)
         collectionManager?.updateWithData(products)
     }
     

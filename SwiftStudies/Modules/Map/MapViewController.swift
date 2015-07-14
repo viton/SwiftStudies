@@ -197,24 +197,15 @@ extension MapViewController {
             maxLat = max(maxLat, location.coordinate.latitude)
             maxLng = max(maxLng, location.coordinate.longitude)
         }
-        println(minLat)
-        println(minLng)
-        println(maxLat)
-        println(maxLng)
-        
         
         let mediumLat = (minLat+maxLat)/2.0
         let mediumLng = (minLng+maxLng)/2.0
         
-//        println("Medium Lat: \((minLat+maxLat)/2.0)")
-//        println("Medium Lng: \((minLng+maxLng)/2.0)")
         let minLocation = CLLocation(latitude: minLat, longitude: minLng)
         let maxLocation = CLLocation(latitude: maxLat, longitude: maxLng)
         let mediumLocation = CLLocation(latitude: mediumLat, longitude: mediumLng)
         
         let distance = minLocation.distanceFromLocation(maxLocation)
-        println("Distance between: \(distance)")
-//        centerMapOnLocation(mediumLocation)
         let regionRadius:Double = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(mediumLocation.coordinate,
             distance, distance)
@@ -262,7 +253,6 @@ extension MapViewController: StoreProviderCallback {
     
     func onSuccessStores(stores: Array<Store>) {
         addPinsForStores(stores)
-        println(stores[0].name)
         
         var array = Array<CLLocation>()
         for store in stores {

@@ -28,8 +28,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxd-VY-go1" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
                                     <rect key="frame" x="5" y="5" width="590" height="41"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CVV"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="mask" value="##/####"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CPF"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="mask" value="###.###.###-##"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-72-fMq" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
