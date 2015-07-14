@@ -44,10 +44,8 @@ class LocationManager: NSObject {
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("Error \(error.localizedDescription)")
         locationManager?.stopUpdatingLocation()
         if(error.code == CLError.Denied.rawValue) {
-            println("CLERROR: Denied")
             callback?.didGetNoLocations("Ops. Autorize o aplicativo a acessar sua localização. Vá em ajustes -> Privacidade -> Localização -> SwiftStudies")
         }else {
             callback?.didGetNoLocations()
@@ -55,11 +53,11 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("authorization status \(status)")
+
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println("did update locations")
+
         locationManager?.stopUpdatingLocation()
         if let clLocations = locations as? [CLLocation] {
             if(clLocations.count > 0) {
@@ -71,8 +69,7 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
-        locationManager?.stopUpdatingLocation() 
-        println("did update to location")
+        locationManager?.stopUpdatingLocation()
     }
     
 }
