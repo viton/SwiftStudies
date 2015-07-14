@@ -10,8 +10,3 @@ pod 'AlamofireObjectMapper',    '~> 0.2'
 pod 'IQKeyboardManager',        '3.2.3'
 
 end
-
-target 'SwiftStudiesTests' do
-
-end
-
