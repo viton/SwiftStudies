@@ -14,11 +14,14 @@ let initialLocation = CLLocation(latitude: -23.545181, longitude: -46.652164)
 class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     var locationManager:LocationManager?
     var storeToShowCallout:Store?
     var selectedAnnotationView:MKAnnotationView?
     var calloutView:MapCalloutView?
+    
+    var tableManager:BaseTableViewManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +37,17 @@ class MapViewController: BaseViewController {
     private func setup() {
         locationManager = LocationManager(callback: self)
         mapView.delegate = self
+        tableManager = StoreTableManager(tableView: tableView, delegate: self)
+        tableView.backgroundColor = UIColor.whiteColor()
     }
     
     private func requestStores(location: CLLocation){
         view.startLoading()
         StoreProvider.getAllStores(self)
+    }
+    
+    @IBAction func locationAction(sender: AnyObject) {
+        locationManager?.startGettingLocation()
     }
     
     private func centerMapOnLocation(location: CLLocation) {
@@ -157,6 +166,62 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        let lineView = MKPolylineRenderer(overlay: overlay)
+        lineView.strokeColor = UIColor.blackColor()
+        
+        return lineView
+    }
+    
+}
+
+extension MapViewController: BaseTableViewManagerDelegate {
+
+    override func didSelectObject(object: AnyObject) {
+        println(object)
+    }
+    
+}
+
+extension MapViewController {
+    
+    private func centerMap(locations: [CLLocation]) {
+        var minLat:Double = 180
+        var minLng:Double = 180
+        var maxLat:Double = -180
+        var maxLng:Double = -180
+        
+        for location in locations {
+            minLat = min(minLat, location.coordinate.latitude)
+            minLng = min(minLng, location.coordinate.longitude)
+            maxLat = max(maxLat, location.coordinate.latitude)
+            maxLng = max(maxLng, location.coordinate.longitude)
+        }
+        println(minLat)
+        println(minLng)
+        println(maxLat)
+        println(maxLng)
+        
+        
+        let mediumLat = (minLat+maxLat)/2.0
+        let mediumLng = (minLng+maxLng)/2.0
+        
+//        println("Medium Lat: \((minLat+maxLat)/2.0)")
+//        println("Medium Lng: \((minLng+maxLng)/2.0)")
+        let minLocation = CLLocation(latitude: minLat, longitude: minLng)
+        let maxLocation = CLLocation(latitude: maxLat, longitude: maxLng)
+        let mediumLocation = CLLocation(latitude: mediumLat, longitude: mediumLng)
+        
+        let distance = minLocation.distanceFromLocation(maxLocation)
+        println("Distance between: \(distance)")
+//        centerMapOnLocation(mediumLocation)
+        let regionRadius:Double = 1000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mediumLocation.coordinate,
+            distance, distance)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+    }
+    
 }
 
 extension CLLocationCoordinate2D {
@@ -198,6 +263,31 @@ extension MapViewController: StoreProviderCallback {
     func onSuccessStores(stores: Array<Store>) {
         addPinsForStores(stores)
         println(stores[0].name)
+        
+        var array = Array<CLLocation>()
+        for store in stores {
+            let location = CLLocation(latitude: store.latitude!, longitude: store.longitude!)
+            array.append(location)
+        }
+        centerMap(array)
+        drawPolygonForLocations(array)
+        tableManager?.updateWithData(stores)
+    }
+    
+    func drawPolygonForLocations(locations: [CLLocation]){
+        mapView.removeOverlays(mapView.overlays)
+        let pointsCount = locations.count+1
+        
+        var pointsToUse: [CLLocationCoordinate2D] = []
+        
+        for location in locations {
+            pointsToUse.append(location.coordinate)
+        }
+        pointsToUse.append(locations[0].coordinate)
+        
+        let myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsCount)
+        
+        mapView.addOverlay(myPolyline)
     }
     
 }

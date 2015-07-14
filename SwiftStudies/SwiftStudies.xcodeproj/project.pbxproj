@@ -67,6 +67,9 @@
 		4DA0A73B1B4DB0A000C30561 /* UIViewAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7361B4DB0A000C30561 /* UIViewAttributes.m */; };
 		4DA0A73E1B4DB10300C30561 /* BaseStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A73D1B4DB10300C30561 /* BaseStylesheet.m */; };
 		4DA0A7491B4DB38D00C30561 /* LabelStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */; };
+		4DA0A7731B504A3600C30561 /* StoreTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7721B504A3600C30561 /* StoreTableManager.swift */; };
+		4DA0A7771B504CC100C30561 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0A7751B504CC100C30561 /* StoreTableViewCell.swift */; };
+		4DA0A7781B504CC100C30561 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA0A7761B504CC100C30561 /* StoreTableViewCell.xib */; };
 		4DA673F81B4329F80081BDB3 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */; };
 		4DEB2E161B3DDCA500BB27CD /* ProjectsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */; };
 		4DEB2E191B41B8E100BB27CD /* DataRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */; };
@@ -152,6 +155,9 @@
 		4DA0A7421B4DB1EA00C30561 /* Stylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stylesheet.h; sourceTree = "<group>"; };
 		4DA0A7471B4DB38D00C30561 /* LabelStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelStylesheet.h; sourceTree = "<group>"; };
 		4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelStylesheet.m; sourceTree = "<group>"; };
+		4DA0A7721B504A3600C30561 /* StoreTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableManager.swift; sourceTree = "<group>"; };
+		4DA0A7751B504CC100C30561 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		4DA0A7761B504CC100C30561 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		4DA673F71B4329F80081BDB3 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
 		4DEB2E151B3DDCA500BB27CD /* ProjectsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsProvider.swift; sourceTree = "<group>"; };
 		4DEB2E181B41B8E100BB27CD /* DataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequestService.swift; sourceTree = "<group>"; };
@@ -443,10 +449,11 @@
 		4D52C64B1B3D9DFA00E8F703 /* TableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				4DA0A7711B504A2700C30561 /* Store */,
 				4D52C64C1B3D9DFA00E8F703 /* BaseTableViewManager.swift */,
+				4D52C64F1B3D9DFA00E8F703 /* TesteTableViewManager.swift */,
 				4D52C64D1B3D9DFA00E8F703 /* TesteTableViewCell.swift */,
 				4D52C64E1B3D9DFA00E8F703 /* TesteTableViewCell.xib */,
-				4D52C64F1B3D9DFA00E8F703 /* TesteTableViewManager.swift */,
 			);
 			path = TableViewManager;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 		4D52C6591B3D9DFA00E8F703 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				4DA0A7741B504CAF00C30561 /* Store */,
 				4D52C65A1B3D9DFA00E8F703 /* NewTableViewCell.swift */,
 				4D52C65B1B3D9DFA00E8F703 /* NewTableViewCell.xib */,
 			);
@@ -630,6 +638,23 @@
 				4DA0A7481B4DB38D00C30561 /* LabelStylesheet.m */,
 			);
 			path = LabelStylesheet;
+			sourceTree = "<group>";
+		};
+		4DA0A7711B504A2700C30561 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7721B504A3600C30561 /* StoreTableManager.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		4DA0A7741B504CAF00C30561 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0A7751B504CC100C30561 /* StoreTableViewCell.swift */,
+				4DA0A7761B504CC100C30561 /* StoreTableViewCell.xib */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		4DA673F61B4326C70081BDB3 /* TabBarController */ = {
@@ -835,6 +860,7 @@
 				4D52C66A1B3D9DFA00E8F703 /* Header.xib in Resources */,
 				4D4E51EE1B4C6CB50049D474 /* MapViewController.xib in Resources */,
 				4D52C6701B3D9DFA00E8F703 /* HomeViewController.xib in Resources */,
+				4DA0A7781B504CC100C30561 /* StoreTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +922,7 @@
 				4DA0A7371B4DB0A000C30561 /* ViewStylesheet.m in Sources */,
 				4D4C7B841B4ABE71000EA238 /* FormView.swift in Sources */,
 				4D52C6601B3D9DFA00E8F703 /* AppDelegate.swift in Sources */,
+				4DA0A7771B504CC100C30561 /* StoreTableViewCell.swift in Sources */,
 				4D4E51C41B4C238A0049D474 /* DBModel.swift in Sources */,
 				4D4C7B771B46E570000EA238 /* RegisterViewController.swift in Sources */,
 				4D52C66B1B3D9DFA00E8F703 /* Placeholder.swift in Sources */,
@@ -921,6 +948,7 @@
 				4DA0A7221B4D87B100C30561 /* MapPin.swift in Sources */,
 				4DA0A7491B4DB38D00C30561 /* LabelStylesheet.m in Sources */,
 				4D52C6631B3D9DFA00E8F703 /* Messages.swift in Sources */,
+				4DA0A7731B504A3600C30561 /* StoreTableManager.swift in Sources */,
 				4DA0A73A1B4DB0A000C30561 /* UIView+UIViewStyle.m in Sources */,
 				4D52C6611B3D9DFA00E8F703 /* BaseViewController.swift in Sources */,
 				4DEB2E2C1B42D0AE00BB27CD /* LoadingExtension.swift in Sources */,

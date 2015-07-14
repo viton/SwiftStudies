@@ -20,7 +20,7 @@
                     <color key="textColor" red="1" green="0.44056581439393938" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="H3_Label"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="H1_Label"/>
                     </userDefinedRuntimeAttributes>
                 </label>
             </subviews>

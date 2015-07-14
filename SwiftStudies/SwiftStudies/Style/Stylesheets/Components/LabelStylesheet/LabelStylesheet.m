@@ -16,9 +16,17 @@
 
 + (NSDictionary *)stylesheet {
     return @{
-             @"H3_Label": @{
+             @"H1_Label": @{
                      PK_LABEL_TEXT_COLOR: COLOR_SWATCH_PRIMARY_COLOR,
                      PK_LABEL_FONT: [UIFont fontWithName:FONT_NAME_NETSHOES_REGULAR size:FONT_SIZE_EXTRA_LARGE]
+                     },
+             @"H2_Label": @{
+                     PK_LABEL_TEXT_COLOR: COLOR_SWATCH_PRIMARY_COLOR,
+                     PK_LABEL_FONT: [UIFont fontWithName:FONT_NAME_NETSHOES_REGULAR size:FONT_SIZE_LARGE]
+                     },
+             @"H3_Label": @{
+                     PK_LABEL_TEXT_COLOR: COLOR_SWATCH_PRIMARY_COLOR,
+                     PK_LABEL_FONT: [UIFont fontWithName:FONT_NAME_NETSHOES_REGULAR size:FONT_SIZE_MEDIUM]
                      },
              };
 }

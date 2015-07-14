@@ -19,50 +19,35 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-2d-fNf">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-2d-fNf">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
                     <subviews>
-                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whG-5Q-RcA">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="332.5"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whG-5Q-RcA">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="214.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxd-VY-go1" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
-                                    <rect key="frame" x="5" y="5" width="590" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" placeholder="YES" id="1zK-tU-97t"/>
-                                    </constraints>
+                                    <rect key="frame" x="5" y="5" width="590" height="41"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="mask" value="###.###.###-##"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CPF"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="disclaimer" value="Digite o cpf inteiro"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CVV"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="mask" value="##/####"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-72-fMq" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
-                                    <rect key="frame" x="5" y="110" width="590" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" placeholder="YES" id="j95-pu-Ue3"/>
-                                    </constraints>
+                                    <rect key="frame" x="5" y="51" width="590" height="41"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="mask" value="#####-###"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CEP"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGR-dY-Ah3" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
-                                    <rect key="frame" x="5" y="215" width="590" height="41"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" placeholder="YES" id="DUi-Wq-wuP"/>
-                                    </constraints>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGR-dY-Ah3" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
+                                    <rect key="frame" x="5" y="97" width="590" height="41"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="securityEntry" value="YES"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Senha"/>
                                     </userDefinedRuntimeAttributes>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="DUi-Wq-wuP"/>
-                                        </mask>
-                                    </variation>
                                 </view>
-                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-7i-NIh" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
-                                    <rect key="frame" x="5" y="261" width="590" height="61.5"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-7i-NIh" customClass="AppTextField" customModule="SwiftStudies" customModuleProvider="target">
+                                    <rect key="frame" x="5" y="143" width="590" height="61.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
